@@ -16,7 +16,7 @@ namespace :import_csv do
     CSV.foreach(path, headers: true) do |row|
       list << row.to_h
     end
-    puts "インポート処理を開始"
+    puts "インポート処理を開始".green
     begin
       User.transaction do
         #例外が発生する可能性のある処理
